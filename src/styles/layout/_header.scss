@@ -1,0 +1,29 @@
+#header {
+  @include adaptive-value('padding-top', 35, 20, 1);
+  @include adaptive-value('padding-bottom', 35, 20, 1);
+  border-bottom: 1px solid rgba(155, 149, 137, 0.4);
+
+  @include media('<phone') {
+    border-bottom: none;
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include adaptive-value('column-gap', 55, 20, 1);
+  }
+
+  .menu_link {
+    color: rgba(65, 65, 65, 0.7);
+    @include adaptive-value('font-size', 16, 13, 1);
+    font-family: 'Mulish';
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: $black;
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
