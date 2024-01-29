@@ -122,7 +122,7 @@ html{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-height: 570px;
+    @include adaptive-value('height', 570, 400, 1);
     @include adaptive-value('width', 470, 340, 1);
   }
 
