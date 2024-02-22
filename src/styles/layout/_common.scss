@@ -25,7 +25,7 @@ html {
     z-index: -1;
   }
 
-  .content{
+  .content {
     text-align: center;
   }
 
@@ -72,13 +72,12 @@ html {
     }
   }
 
-
   .main_video {
     width: 100%;
     height: 760px;
     position: relative;
 
-    @include media('<phone'){
+    @include media('<phone') {
       height: auto;
     }
   }
@@ -88,7 +87,7 @@ html {
     height: 100%;
   }
 
-  #play_button{
+  #play_button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -222,6 +221,128 @@ html {
     color: #666564;
     @include adaptive-value('font-size', 16, 14, 1);
     line-height: 160%;
+  }
+}
+
+.register {
+  @include adaptive-value('padding-top', 60, 30, 1);
+  @include adaptive-value('padding-bottom', 80, 35, 1);
+
+  .register_title {
+    margin-bottom: 50px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include adaptive-value('gap', 50, 35, 1);
+  }
+
+  .form_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptive-value('gap', 50, 30, 1);
+  }
+
+  .input_wrap {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    gap: 15px;
+  }
+
+  .label_name {
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .input_data {
+    border: none;
+    border-bottom: 1px solid $gray;
+    background-color: transparent;
+    padding-bottom: 15px;
+    @include adaptive-value('font-size', 20, 16, 1);
+    font-weight: 600;
+
+    &::placeholder {
+      color: #ababab;
+      @include adaptive-value('font-size', 20, 16, 1);
+      font-weight: 600;
+    }
+  }
+
+  .area_wrap {
+    width: 100%;
+  }
+
+  .check_wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + .custom-checkbox::after {
+      visibility: visible;
+    }
+  }
+
+  .custom-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $gray;
+    border-radius: 0;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url('../image/checkbox_img.png') center/contain no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+    }
+  }
+
+  .checkbox:checked + .custom-checkbox::after {
+    color: $gray;
+  }
+
+  .form_btn {
+    display: flex;
+    width: 169px;
+    height: 56px;
+    padding: 12px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: $gray;
+    color: #f8f7f2;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid $gray;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      transition: all 0.3s ease 0s;
+      color: #646a5e;
+      background: #f8f7f2;
+    }
   }
 }
 
