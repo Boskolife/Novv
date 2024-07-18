@@ -1,3 +1,6 @@
+import { burgerMenu } from "./burger";
+
+burgerMenu();
 playVideo();
 
 function playVideo(): void {

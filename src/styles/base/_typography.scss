@@ -14,7 +14,7 @@ h6,
 .h6,
 .h {
   font-weight: bold;
-  margin: 0 0 0.5em;
+  margin: 0;
   color: $headings-color;
 }
 
@@ -27,7 +27,6 @@ h2,
 .h2 {
   color: $black;
   text-align: center;
-  font-family: 'KyivType Sans';
   @include adaptive-value('font-size', 56, 32, 1);
   font-weight: 500;
   text-transform: uppercase;
